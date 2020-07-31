@@ -1,0 +1,315 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+    background-color: #e8e8e8;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    max-width: 1440px;
+    min-width: 1140px;
+    padding-top: 40px;
+    margin: 0 auto;
+    font-family: 'Lato', sans-serif;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.logo{
+    margin-bottom: 30px;
+}
+.logo span{
+    font-family: 'Slabo 27px', serif;
+    font-size: 45px;
+}
+.tabs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.tabs__btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tabs__btn {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    user-select:none;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    background: #e8e8e8;
+    box-shadow:  -13px 13px 36px #d1d1d1, 13px -13px 36px #ffffff;
+    cursor: pointer;
+    margin-right: 40px;
+    transition: all 0.2s linear;
+}
+.tabs__btn-icon{
+    margin-right: 5px;
+    transition: all 0.2s linear;
+}
+.tabs__btn:hover{
+    color: #0075ff;
+}
+.tabs__btn:hover .tabs__btn-icon{
+    stroke: #0075ff;
+}
+.tabs__btn:active{
+    border-radius: 8px;
+    background: #e8e8e8;
+    box-shadow: inset -7px 7px 14px #c5c5c5, inset 7px -7px 14px #ffffff;
+}
+.tab__content{
+    display: none;
+}
+.video-player{
+    max-width: 610px;
+    max-height: 550px;
+    border-radius: 6px;
+}
+
+.video-navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+}
+.button{
+    color: #000000;
+    border: none;
+    outline: none;
+    padding: 10px;
+    text-align: center;
+    background: #e8e8e8;
+    box-shadow:  -10px 10px 15px #d1d1d1, 10px -10px 15px #ffffff;
+    border-radius: 50%;
+    font-size: 16px;
+    margin-right: 15px;
+    transition: all 0.2s linear;
+}
+.button:hover{
+    color: #0075ff;
+}
+.time__passed{
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 15px;
+}
+.time__total{
+    display: inline-block;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 14px;
+}
+input[type=range]{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 16px;
+    background: #e8e8e8;
+    box-shadow: inset -3px 3px 7px #c1c1c1, inset 3px -3px 7px #ffffff;
+}
+.control__buttons input[type=range]{
+    -webkit-appearance: none;
+    width: 100%;
+    border-radius: 16px;
+    background: #e8e8e8;
+    box-shadow: inset -3px 3px 7px #c1c1c1, inset 3px -3px 7px #ffffff;
+}
+.video-navigation input[type=range]:last-of-type, .control__buttons input[type=range]{
+    -webkit-appearance: none;
+    width: 50px;
+    border-radius: 16px;
+    background: #e8e8e8;
+    box-shadow: inset -3px 3px 7px #c1c1c1, inset 3px -3px 7px #ffffff;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+input[type=range]:focus {
+    outline: none; 
+}
+input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent; /* Скрывает слайдер, чтобы можно было добавить собственные стили. */
+    border-color: transparent;
+    color: transparent;
+}
+
+/* Специальные правила для браузеров на движках WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 50%;
+    background: #e8e8e8;
+    box-shadow:  -3px 3px 7px #c1c1c1, 3px -3px 7px #ffffff;
+    height: 10px;
+    width: 10px;
+    cursor: pointer; /* Вам нужно указать значение для поля в Chrome, но в Firefox и IE это происходит автоматически */
+}
+  
+  /* Тоже самое для Firefox */
+input[type=range]::-moz-range-thumb {
+    border: none;
+    border-radius: 50%;
+    background: #e8e8e8;
+    box-shadow:  -3px 3px 7px #c1c1c1, 3px -3px 7px #ffffff;
+    height: 10px;
+    width: 10px;
+    cursor: pointer;
+}
+  
+  /* Тоже самое для IE */
+input[type=range]::-ms-thumb {
+    border: none;
+    border-radius: 50%;
+    background: #e8e8e8;
+    box-shadow:  -3px 3px 7px #c1c1c1, 3px -3px 7px #ffffff;
+    height: 10px;
+    width: 10px;
+    cursor: pointer;
+  }
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    content: '.';
+    border: none;
+    border-radius: 50%;
+    background: #e8e8e8;
+    box-shadow:  -3px 3px 7px #c1c1c1, 3px -3px 7px #ffffff;
+    height: 10px;
+    width: 10px;
+    transition: all 0.2s linear;
+    cursor: pointer; /* Вам нужно указать значение для поля в Chrome, но в Firefox и IE это происходит автоматически */
+}
+.control__buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.progress__bar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.audio_content{
+    margin-bottom: 50px;
+}
+.audio__layer{
+    max-width: 500px;
+    max-height: 400px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+.audio_name{
+    margin-bottom: 0px;
+}
+.audio_controls{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 30px;
+}
+.control__buttons > .audio_prev_btn, .audio_next_btn{
+    padding-left: 12px;
+    padding-right: 12px;
+}
+/* .control__buttons{
+} */
+/* .audio_repeat_btn{
+
+}
+.audio_prev_btn{
+
+} */
+/* .audio_play_btn{
+} */
+/* .audio_next_btn{
+} */
+.progress__bar .time__passed {
+    font-size: 12px;
+    color: #424242;
+    font-weight: 700;
+}
+.progress__bar .time__total{
+    font-size: 12px;
+    color: #424242;
+    font-weight: 700;
+}
+.video_volume_up{
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.fullscreen_video{
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+.fullscreen_video:hover{
+    color: #0075ff;
+}
+.audio_volume_up{
+    width: 100%;
+    font-size: 18px;
+    margin-left: 8px;
+    cursor: pointer;
+} 
+/****************** Dynamic classes ********************/
+.volume_on {
+    color: #0075ff;
+}
+
+.tab__content--active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 16px;
+    border-radius: 10px;
+    background: #e8e8e8;
+    box-shadow:  -13px 13px 36px #d1d1d1, 13px -13px 36px #ffffff;
+    padding: 20px;
+}
+.active {
+    color: #0075ff;
+    border-radius: 8px;
+    background: #e8e8e8;
+    box-shadow: inset -8px 8px 12px #c5c5c5, inset 8px -8px 12px #ffffff;
+}
+
+.active .tabs__btn-icon{
+    stroke: #0075ff;
+}
+.clicked{
+    color: #000000;
+    border: none;
+    outline: none;
+    padding: 10px;
+    text-align: center;
+    background: #e8e8e8;
+    box-shadow: inset -7px 7px 14px #c5c5c5, inset 7px -7px 14px #ffffff;
+    border-radius: 50%;
+    font-size: 16px;
+    margin-right: 15px;
+    transition: all 0.2s linear;
+    color: #0075ff;
+}
+.clicked:hover{
+    color: #0075ff;
+}
