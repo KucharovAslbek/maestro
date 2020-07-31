@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="image/logo.ico">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Maestro -  video, music, radio!</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1 class="logo"><span>M</span>aestro</h1>
+            <div class="tabs">
+                <div class="tabs__btns">
+                    <div class="tabs__btn video_btn" data-content="video">
+                        <svg class="tabs__btn-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z"/>
+                            <rect x="4" y="4" width="16" height="16" rx="2" />
+                            <line x1="8" y1="4" x2="8" y2="20" />
+                            <line x1="16" y1="4" x2="16" y2="20" />
+                            <line x1="4" y1="8" x2="8" y2="8" />
+                            <line x1="4" y1="16" x2="8" y2="16" />
+                            <line x1="4" y1="12" x2="20" y2="12" />
+                            <line x1="16" y1="8" x2="20" y2="8" />
+                            <line x1="16" y1="16" x2="20" y2="16" />
+                        </svg>  
+                        Video
+                    </div>
+                    <div class="tabs__btn audio_btn" data-content="audio">
+                        <svg class="tabs__btn-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z"/>
+                            <circle cx="6" cy="17" r="3" />
+                            <circle cx="16" cy="17" r="3" />
+                            <polyline points="9 17 9 4 19 4 19 17" />
+                            <line x1="9" y1="8" x2="19" y2="8" />
+                        </svg>
+                        Audio
+                    </div>
+                    <div class="tabs__btn radio_btn">
+                        <svg class="tabs__btn-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z"/>
+                            <rect x="9" y="2" width="6" height="11" rx="3" />
+                            <path d="M5 10a7 7 0 0 0 14 0" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                        Radio
+                    </div>
+                </div>
+                <div class="tabs__content">
+                    <div class="container">
+                        <div class="video tab__content video_content">
+                            <video class="video-player" src="video/video.mp4"></video>
+                            <nav class="video-navigation">
+                                <button class="button video-button__play fa fa-play"></button>
+                                <button class="button video-button__stop fa fa-stop"></button>
+                                <p class="time video-time__passed time__passed">00:00</p>
+                                <input type="range" class="video-progress" min="0" max="100" step="0.1" value="0">
+                                <p class="time video-time__total time__total">00:00</p>
+                                <input type="range" class="video_volume" min="0" max="100" step="1" value="100">
+                                <span class="video_volume_up fa fa-volume-up volume_on"></span>
+                                <span class="fullscreen_video fa fa-arrows-alt"></span>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="audio tab__content audio_content">
+                        <audio class="audio-player" src=""></audio>
+                        <img src="" alt="Music layer" class="audio__layer">
+                        <h2 class="audio_name"></h2>
+                        <nav class="audio_controls">
+                            <div class="progress__bar">
+                                <p class="time audio-time__passed time__passed">00:00</p>
+                                <input type="range" class="audio_progress" min="0" max="100" step="0.1" value="0">
+                                <p class="time audio-time__total time__total">00:00</p>
+                            </div>
+                            <div class="control__buttons">
+                                <button class="button audio_repeat_btn fa fa-repeat"></button>
+                                <button class="button audio_prev_btn fa fa-step-backward"></button>
+                                <button class="button audio_play_btn fa fa-play"></button>
+                                <button class="button audio_next_btn fa fa-step-forward"></button>
+                                <input type="range" class="audio_volume" min="0" max="100" step="1" value="100">
+                                <span class="audio_volume_up fa fa-volume-up volume_on"></span>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="radio tab__content radio_content">
+                        <audio class="radio-player" src="" controls></audio>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>
